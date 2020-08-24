@@ -1,0 +1,13 @@
+:root {
+  --mainColor: #000000;
+  --mainLightColor: #3a0a32;
+  --headingPrimaryColor: #74003b;
+  --headingSecondaryColor: #c2166d;
+  --buttonColor: #ffd8f8;
+  --containerMainColor: rgb(255 98 212 / 44%);
+  --containerSecondaryColor: rgb(255 107 194 / 27%);
+  --containerTertiaryColor: rgba(255, 255, 255, 0.11);
+  --homeBGColor1: #ffc2ed;
+  --homeBGColor2: #ffedfa;
+  --BGColor: #ffc2ed;
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="text/css"
+      href="./assets/themes/dark.css"
+      class="theme-select"
+      rel="stylesheet"
+    />
+    <title>Developer Braham</title>
+    <link rel="shortcut icon" href="./assets/user-tie-solid.svg" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="">
+      <div class="menu">
+        <div class="top"></div>
+        <div class="mid"></div>
+        <div class="bottom"></div>
+      </div>
+      <!-- navbar -->
+      <nav class="navbar slideFade">
+        <div class="logo slideFade" data-delay=".2">
+          <a href="#home"
+            ><img class="logo-img" src="./assets/images/Hero.jpg" alt=""
+          /></a>
+        </div>
+        <div class="themes">
+          <div class="dark"></div>
+          <div class="light"></div>
+          <div class="pink"></div>
+          <div class="orange"></div>
+        </div>
+        <ul class="slideFade" data-delay=".2">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="particles-container"></div>
+      <!-- Home -->
+      <section id="home">
+        <div class="home-left-container">
+          <div class="img-container slideFade"></div>
+          <div class="text-container">
+            <p class="secondary slideFade">Hello, I am</p>
+            <h1 class="slideFade" data-delay=".3">Braham Prakash</h1>
+            <p class="secondary slideFade" data-delay=".6">
+              Frontend Developer
+            </p>
+            <p class="slideFade" data-delay="1">with good understanding of Javascript</p>
+          </div>
+          <div>
+            <a class="slideFade" data-delay="1.5" href="#projects"
+              >My Projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section id="projects">
+        <h1>My Projects</h1>
+        <div class="projects-container">
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a
+                href="https://devbrm.github.io/react-TodoList/"
+                target="_blank"
+              >
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/todo list.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">React TODO</h4>
+              <p class="slideFade" data-delay="1">
+                A todo list in <code>react.js</code> using the
+                modern <code>ES6 Class</code> components which also uses the local
+                storage feature of the browser to preserve the previous state.
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a
+                href="https://devbrm.github.io/fccProductPage/#plans"
+                target="_blank"
+              >
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/productPage.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">Product Page</h4>
+              <p class="slideFade" data-delay="1">
+                In this project I have created a product landing page for a
+                fashion design website.
+              </p>
+            </div>
+          </div>
+
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a href="https://devbrm.github.io/HtmlCanvas/" target="_blank">
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/html canvas.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">HTML Canvas</h4>
+              <p class="slideFade" data-delay="1">
+                This website uses the HTML <code>&lt;canvas&gt;</code> element
+                to create cool graphics in the web browser.
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a href="https://devbrm.github.io/Sound-App/" target="_blank">
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/sound app.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">Sound App</h4>
+              <p class="slideFade" data-delay="1">
+                Here I have focused on the new
+                <code>&lt;audio&gt;</code> element and upon either clicking or pressing the keys will play a cool sound.
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a href="https://devbrm.github.io/randomGIF/" target="_blank">
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/gif generator.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">GIF Generator</h4>
+              <p class="slideFade" data-delay="1">
+                Using the latest <code>fetch API</code> to generate the GIFS
+                from the GIFY API, just use the input to search for GIF and you
+                can get upto 100 results per search :-).
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a href="https://devbrm.github.io/fccTD/" target="_blank">
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/technical documentation.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">CSS Documentation</h4>
+              <p class="slideFade" data-delay="1">
+                Created a <code>CSS</code> documentation, with linking the
+                references to the MDN official documentation.
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a
+                href="https://devbrm.github.io/FollowTheMouse/"
+                target="_blank"
+              >
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/mouse follow.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">Mouse Movements</h4>
+              <p class="slideFade" data-delay="1">
+                Using the mouse events with Vanilla JavaScript, I have created
+                a page in which a few things animates as the mouse cursor moves
+                across the web page.
+              </p>
+            </div>
+          </div>
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a href="https://devbrm.github.io/fccSurveyForm/" target="_blank">
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/survey form.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">Survey Form</h4>
+              <p class="slideFade" data-delay="1">
+                Here i have created a form page using the
+                <code>form</code> element, where i have used many of the
+                <code>form</code> elemnts like
+                <code>input,textarea,button,select</code> etc.
+              </p>
+            </div>
+          </div>
+
+          <div data-delay=".15" class="project slideFade">
+            <div class="img-container">
+              <a
+                href="https://devbrm.github.io/fccTributePage/"
+                target="_blank"
+              >
+                <img
+                  class="slideFade"
+                  data-delay=".3"
+                  src="./assets/images/tributePage.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="text-container">
+              <h4 class="slideFade" data-delay=".8">Tribute Page</h4>
+              <p class="slideFade" data-delay="1">
+                This website is dedicated to my role model and world famous
+                motivational speaker Mr. Sandeep Maheshwari.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- skills -->
+      <section id="skills">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+          <div class="skill slideFade">
+            <h2 class="slideFade" data-delay=".1">Technical Skills</h2>
+            <p class="slideFade" data-delay=".5">HTML 5, CSS3, JavaScript</p>
+            <div class="icons slideFade">
+              <span>
+                <i class="fab fa-2x fa-html5"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-css3-alt"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-js"></i>
+              </span>
+            </div>
+          </div>
+          <div class="skill slideFade">
+            <h2 class="slideFade" data-delay=".1">Frameworks</h2>
+            <p class="slideFade" data-delay=".5">
+              React, Jquery, Bootstrap, Saas, Node JS
+            </p>
+            <div class="icons slideFade">
+              <span>
+                <i class="fab fa-2x fa-react"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-bootstrap"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-sass"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-node-js"></i>
+              </span>
+            </div>
+          </div>
+          <div class="skill slideFade">
+            <h2 class="slideFade" data-delay=".1">Utilites</h2>
+            <p class="slideFade" data-delay=".5">
+              Git, Express, Photoshop, XD, After Effects, 3DS Max, Blender, VS
+              Code, Github
+            </p>
+            <div class="icons slideFade">
+              <span>
+                <i class="fab fa-2x fa-git-alt"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-adobe"></i>
+              </span>
+              <span>
+                <i class="fab fa-2x fa-github"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about">
+        <h1>About</h1>
+        <div class="about-container card slideFade">
+          <div class="about-info">
+            <h2 class="slideFade" data-delay=".2">About me</h2>
+            <div class="slideFade" data-delay=".8">
+              <p>
+                I am a <strong>Web Developer</strong> with having a
+                very good understanding of the
+                <strong> web technologies</strong>, I also have a huge interest
+                in computer science and science in general.
+              </p>
+              <p>
+                I am tech savvy, I always keeps myself upto date.
+              </p>
+              <p>
+                I am ready to work as a <strong>team</strong>, I am ready to
+                take the new <strong>opportunity</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="eduction-info card slideFade">
+          <h2 class="slideFade" data-delay=".2">Education</h2>
+          <div class="slideFade" data-delay=".8">
+            <p>
+              <strong>Graphic Design, Animation</strong>, VFX course from MACC
+            </p>
+            <p>Graduated from University Of Delhi (Bachelors of Arts Degree)</p>
+            <p>
+              Graduated from High School with
+              <strong>Computer Science & Maths</strong>
+            </p>
+          </div>
+        </div>
+        <div class="certificates-info card slideFade">
+          <h2 class="slideFade" data-delay=".2">Certificates</h2>
+          <div class="slideFade" data-delay=".8">
+            <p>
+              <strong>Freecodecamp</strong> certificate in
+              <strong
+                >Responsive Web design, Data Structures & algorithms,
+                Functional Programming</strong
+              >
+            </p>
+            <p>
+              Solo Learn Certificates in <strong>JavaScript, CSS, HTML5</strong>
+            </p>
+            <p>Grasshopper mobile App for learning to code Certificates</p>
+            <p><strong>Adobe ACA</strong> Certificates</p>
+            <p>
+              <strong>Autodesk</strong> Certificates for
+              <strong>3DS MAX, MAYA</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="social-links card slideFade">
+          <a href="https://www.freecodecamp.org/brahamprakash" target="_blank">
+            <i class="fab fa-3x fa-free-code-camp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/braham2095/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-3x fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/devbrm" target="_blank">
+            <i class="fab fa-3x fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact">
+        <h1>Let's have a talk</h1>
+        <div class="contact-form slideFade">
+          <form action="">
+            <input
+              class="slideFade"
+              data-delay=".3"
+              type="text"
+              required
+              name="name"
+              id="name"
+              placeholder="Enter Name"
+            />
+            <input
+              class="slideFade"
+              data-delay=".3"
+              type="email"
+              required
+              name="email"
+              id="email"
+              placeholder="Enter Email"
+            />
+            <textarea
+              class="slideFade"
+              data-delay=".3"
+              name="message"
+              id="message"
+              required
+              placeholder="Enter Message"
+            ></textarea>
+            <button class="slideFade" data-delay=".8" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+      <div>Made with ❤ by Braham Prakash, Copyright &copy; 2020</div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="./assets/ParticleJS/particles.js"
+    ></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
