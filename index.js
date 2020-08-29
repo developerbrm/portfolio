@@ -180,6 +180,24 @@ const setParticleColor = (json) => {
   json.particles.line_linked.color = colorOfCSS.trim();
 };
 
+//Click to copy to clipboard
+
+const email = document.querySelector(".email-text .email");
+const span = document.querySelector(".email-text .info");
+email.addEventListener("click", () => {
+  email.select();
+  email.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.querySelector(".email-text .info").style.display = "inline";
+  setTimeout(() => {
+    document.querySelector(".email-text .info").style.filter = "saturate(0)";
+  }, 3000);
+  setTimeout(() => {
+    document.querySelector(".email-text .info").style.display = "none";
+    document.querySelector(".email-text .info").style.filter = "none";
+  }, 4000);
+});
+
 //Backend integration with firebase
 
 const form = document.querySelector("#form");
@@ -199,6 +217,17 @@ const submitForm = (e) => {
     email,
     message,
   });
+
+  document.querySelector(".submit-message").style.display = "block";
+  setTimeout(() => {
+    document.querySelector(".submit-message").style.filter = "saturate(0)";
+  }, 3000);
+  setTimeout(() => {
+    document.querySelector(".submit-message").style.display = "none";
+    document.querySelector(".submit-message").style.filter = "none";
+  }, 4000);
+
+  form.reset();
 };
 
 form.addEventListener("submit", submitForm);
