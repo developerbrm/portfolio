@@ -1,3 +1,17 @@
+//Firebase Initialization
+var firebaseConfig = {
+  apiKey: "AIzaSyBM3XhG1PR-nu5Jk7yGmjf1IIVqu4W4RRY",
+  authDomain: "portfolio2095.firebaseapp.com",
+  databaseURL: "https://portfolio2095.firebaseio.com",
+  projectId: "portfolio2095",
+  storageBucket: "portfolio2095.appspot.com",
+  messagingSenderId: "435569868585",
+  appId: "1:435569868585:web:964de4b6020c1f503b4138",
+  measurementId: "G-MLD9BE3SJJ",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 // header elements
 const header = document.querySelector("header");
 const navUL = document.querySelector("header nav ul");
@@ -22,17 +36,99 @@ header.addEventListener("click", (e) => {
 
 // theme elements
 const themes = document.querySelector(".themes");
-const selectedTheme = document.querySelector(".theme-select");
 
 const themeClicked = (e) => {
   if (e.target.parentNode !== themes) return;
+  if (localStorage.getItem(`theme`) === e.target.className) return;
+
   setTheme(e.target.className);
   renderParticle();
 };
 
 const setTheme = (theme) => {
   localStorage.setItem(`theme`, theme || `dark`);
-  selectedTheme.href = `./assets/themes/${localStorage.getItem(`theme`)}.css`;
+  getStyle(localStorage.getItem(`theme`));
+};
+
+const setColors = (...colors) => {
+  const variables = [
+    "--mainColor",
+    "--mainLightColor",
+    "--headingPrimaryColor",
+    "--headingSecondaryColor",
+    "--buttonColor",
+    "--containerMainColor",
+    "--containerSecondaryColor",
+    "--containerTertiaryColor",
+    "--homeBGColor1",
+    "--homeBGColor2",
+    "--BGColor",
+  ];
+
+  variables.forEach((variable, index) => {
+    document.documentElement.style.setProperty(variable, colors[index]);
+  });
+};
+
+const getStyle = (themeName) => {
+  switch (themeName) {
+    case "dark":
+      return setColors(
+        "#8E8E8E",
+        "#ddd",
+        "#7363FF",
+        "#B3B3FF",
+        "#6D6DB3",
+        "#00000070",
+        "#ffffff0d",
+        "#ffffff1c",
+        "#221F33",
+        "#110F1A",
+        "#1C1C1C"
+      );
+    case "light":
+      return setColors(
+        "#414141",
+        "#000",
+        "#1d1d1d",
+        "#7c7c7c",
+        "#82dcff",
+        "#cecece70",
+        "#00000012",
+        "#fffdfd24",
+        "#c7f2ff",
+        "#ecfdff",
+        "#fff"
+      );
+    case "orange":
+      return setColors(
+        "#8e8e8e",
+        "#ddd",
+        "#f28f00",
+        "#ffc46c",
+        "#4d4d4d",
+        "#00000070",
+        "#ffffff0d",
+        "#ffffff1c",
+        "#414141",
+        "#000000",
+        "#1c1c1c"
+      );
+    case "pink":
+      return setColors(
+        "#000000",
+        "#3a0a32",
+        "#74003b",
+        "#c2166d",
+        "#ffd8f8",
+        "#ff62d470",
+        "#ff6bc245",
+        "#ffffff1c",
+        "#ffc2ed",
+        "#ffedfa",
+        "#ffc2ed"
+      );
+  }
 };
 
 // theme events
@@ -84,4 +180,28 @@ const setParticleColor = (json) => {
   json.particles.line_linked.color = colorOfCSS.trim();
 };
 
+//Backend integration with firebase
+
+const form = document.querySelector("#form");
+//create refrence to the firebase
+
+const submitForm = (e) => {
+  e.preventDefault();
+  const time = new Date(Date.now()).toLocaleString().replace(/[/]/g, "-");
+  const messagesRef = firebase.database().ref(`${time}`);
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const message = document.querySelector("#message").value;
+
+  const newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name,
+    email,
+    message,
+  });
+};
+
+form.addEventListener("submit", submitForm);
+
+//Render the particles js script
 renderParticle();

@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --mainColor: #8e8e8e;
+  --mainLightColor: #ddd;
+  --headingPrimaryColor: #7363ff;
+  --headingSecondaryColor: #b3b3ff;
+  --buttonColor: #6d6db3;
+  --containerMainColor: #00000070;
+  --containerSecondaryColor: #ffffff0d;
+  --containerTertiaryColor: #ffffff1c;
+  --homeBGColor1: #221f33;
+  --homeBGColor2: #110f1a;
+  --BGColor: #1c1c1c;
+}
+
 html {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -15,18 +29,17 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   font-family: "open sans";
-  background: var(--BGColor);
+  background-color: var(--BGColor);
   overflow-x: hidden;
 }
 
-body * {
-  transition: 0.3s ease-out;
-  transition-property: color, background-image, color;
+body {
+  transition: 0.6s ease-in;
+  transition-property: color, background-color;
 }
 
 div {
   z-index: 2;
-
 }
 
 section {
@@ -67,6 +80,7 @@ section {
 
 p {
   font-weight: 100;
+  font-family: "open sans";
 }
 
 li {
@@ -90,7 +104,7 @@ button:hover {
 }
 
 code {
-  background: var(--BGColor);
+  background-color: var(--BGColor);
   padding: 1px 5px;
 }
 
@@ -113,7 +127,7 @@ header .themes div {
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background: #fff;
+  background-color: #fff;
   cursor: pointer;
   transition: 0.3s ease-in;
   transition-property: transform, filter;
@@ -125,19 +139,19 @@ header .themes div {
 }
 
 .themes .dark {
-  background: #7363ff;
+  background-color: #7363ff;
 }
 
 .themes .light {
-  background: #ddd;
+  background-color: #ddd;
 }
 
 .themes .pink {
-  background: hotpink;
+  background-color: hotpink;
 }
 
 .themes .orange {
-  background: orange;
+  background-color: orange;
 }
 
 header .menu {
@@ -156,7 +170,7 @@ header .menu:hover {
 }
 
 header .menu div {
-  background: var(--mainLightColor);
+  background-color: var(--mainLightColor);
   border-radius: 10px;
   width: 30px;
   height: 4px;
@@ -173,7 +187,7 @@ header .menu .bottom {
 /* navbar */
 
 header nav {
-  background: var(--containerMainColor);
+  background-color: var(--containerMainColor);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.13);
   min-height: 3rem;
   padding: 0 2rem;
@@ -234,14 +248,14 @@ nav a {
   padding: 2rem;
   border-radius: 5px;
   color: var(--mainLightColor);
-  background: var(--containerSecondaryColor);
+  background-color: var(--containerSecondaryColor);
 }
 
 #home .img-container {
   margin: 1rem 0;
   position: relative;
   border-radius: 50%;
-  background: #7363ff;
+  background-color: #7363ff;
   background: url(./assets/images/Hero.jpg);
   background-size: cover;
   background-position: center;
@@ -254,12 +268,16 @@ nav a {
 #home .home-left-container .text-container * {
   font-weight: 400;
   padding-left: 1rem;
-}  
+}
 
 #home h1 {
   color: var(--headingPrimaryColor);
   width: max-content;
-  background: linear-gradient(90deg, var(--headingPrimaryColor), var(--headingSecondaryColor) );
+  background: linear-gradient(
+    90deg,
+    var(--headingPrimaryColor),
+    var(--headingSecondaryColor)
+  );
   background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
@@ -268,27 +286,26 @@ nav a {
   margin: 0.5rem 0;
   padding: 0;
   font-size: 4rem;
-}  
+}
 
 #home .home-left-container div a {
   color: var(--mainLightColor);
   font-size: 1.2rem;
   text-decoration: none;
   text-align: center;
-  display: block;
+  display: inline-block;
   width: 100%;
-  max-width: 220px;
+  max-width: max-content;
   margin-top: 2rem;
   border-radius: 5px;
   padding: 0.6rem 1.4rem;
-  background: var(--buttonColor);
-}  
+  background-color: var(--buttonColor);
+}
 
 #home .home-left-container div a:hover {
   filter: contrast(2);
   transform: scale(0.98);
-}  
-
+}
 
 /* projects */
 
@@ -317,7 +334,7 @@ nav a {
   max-width: 300px;
   width: 100%;
   height: 100%;
-  background: var(--containerMainColor);
+  background-color: var(--containerMainColor);
   border-radius: 5px;
   -webkit-box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.25);
@@ -350,8 +367,8 @@ nav a {
 }
 
 #projects .text-container h4 {
-  font-size: 2rem;
-  padding: 1rem 0 .5rem 0;
+  font-size: 1.8rem;
+  padding: 1rem 0 0.5rem 0;
   color: var(--headingSecondaryColor);
 }
 
@@ -367,7 +384,7 @@ nav a {
 #skills .skills-container .skill {
   font-weight: 100;
   color: var(--mainLightColor);
-  background: var(--containerSecondaryColor);
+  background-color: var(--containerSecondaryColor);
   padding: 2rem;
   width: 50%;
   max-width: 500px;
@@ -389,7 +406,6 @@ nav a {
   margin: 0 4px;
 }
 
-
 /* about */
 
 #about {
@@ -401,13 +417,14 @@ nav a {
   padding: 0.4rem 0;
 }
 
-#about .card {
+#about .card,
+#contact .card {
   width: 60%;
   margin: 0 auto 2rem auto;
   max-width: 700px;
   border-radius: 5px;
   padding: 2rem;
-  background: var(--containerSecondaryColor);
+  background-color: var(--containerSecondaryColor);
   box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.31);
 }
 
@@ -420,19 +437,24 @@ nav a {
   padding-left: 2rem;
 }
 
-#about .social-links {
-  width: 80%;
-}
-
-#about i {
-  color: var(--headingPrimaryColor);
-  margin: 0 5px;
-}
-
 /* contact */
 
 #contact {
   box-shadow: none;
+  text-align: center;
+}
+
+#contact .social-links {
+  width: 80%;
+}
+
+#contact i {
+  color: var(--headingPrimaryColor);
+  margin: 0 5px;
+}
+
+#contact .or {
+  margin: 1rem auto;
 }
 
 #contact form {
@@ -443,7 +465,7 @@ nav a {
   max-width: 1000px;
   height: 500px;
   max-height: 100%;
-  background: var(--containerSecondaryColor);
+  background-color: var(--containerSecondaryColor);
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -479,7 +501,7 @@ form textarea {
   max-height: 300px;
   width: 90%;
   text-align: left;
-  background: rgba(255, 255, 255, 0.116);
+  background-color: rgba(255, 255, 255, 0.116);
   overflow: hidden;
 }
 
@@ -488,7 +510,7 @@ form button {
   font-size: 1.2rem;
   border-radius: 15px;
   color: var(--mainLightColor);
-  background: var(--buttonColor);
+  background-color: var(--buttonColor);
   border: none;
   outline: none;
   cursor: pointer;
@@ -507,7 +529,7 @@ footer {
   padding: 1rem;
   text-align: center;
   color: var(--headingSecondaryColor);
-  background: var(--containerTertiaryColor);
+  background-color: var(--containerTertiaryColor);
 }
 
 /* effects classes */
@@ -541,7 +563,7 @@ footer {
 /* particles */
 
 #particles-js {
-  opacity: .3;
+  opacity: 0.3;
   position: absolute;
   z-index: 1;
   pointer-events: none;
@@ -560,7 +582,7 @@ footer {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: var(--containerMainColor);
+    background-color: var(--containerMainColor);
     transition: 0.3s cubic-bezier(0, 1, 0.73, 0.96);
     transition-property: clip-path;
     clip-path: circle(8% at 100% 0%);
@@ -588,7 +610,7 @@ footer {
     pointer-events: all;
   }
 
-  header nav .logo{
+  header nav .logo {
     margin: 0 0 2rem 0;
   }
 
