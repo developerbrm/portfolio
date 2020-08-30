@@ -149,7 +149,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const animations = ["slideFade", "slideFadeRight"].forEach((animation) => {
+const animations = ["slideFade"].forEach((animation) => {
   const elements = document.querySelectorAll(`${animation}`);
   elements.forEach((element) => observer.observe(element));
 });
@@ -183,19 +183,16 @@ const setParticleColor = (json) => {
 //Click to copy to clipboard
 
 const email = document.querySelector(".email-text .email");
-const span = document.querySelector(".email-text .info");
 email.addEventListener("click", () => {
   email.select();
   email.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  document.querySelector(".email-text .info").style.display = "inline";
+  document.querySelector(
+    "#contact .info"
+  ).style.animation = `fadeOut 4s cubic-bezier(0, 0.68, 0.31, 1.05) forwards`;
   setTimeout(() => {
-    document.querySelector(".email-text .info").style.filter = "saturate(0)";
+    document.querySelector("#contact .info").style.animation = "none";
   }, 3000);
-  setTimeout(() => {
-    document.querySelector(".email-text .info").style.display = "none";
-    document.querySelector(".email-text .info").style.filter = "none";
-  }, 4000);
 });
 
 //Backend integration with firebase
@@ -218,14 +215,12 @@ const submitForm = (e) => {
     message,
   });
 
-  document.querySelector(".submit-message").style.display = "block";
+  document.querySelector(
+    ".submit-message"
+  ).style.animation = `fadeOut 3s cubic-bezier(1, 0.04, 0.97, 0.99) forwards`;
   setTimeout(() => {
-    document.querySelector(".submit-message").style.filter = "saturate(0)";
-  }, 3000);
-  setTimeout(() => {
-    document.querySelector(".submit-message").style.display = "none";
-    document.querySelector(".submit-message").style.filter = "none";
-  }, 4000);
+    document.querySelector(".submit-message").style.animation = "none";
+  }, 3500);
 
   form.reset();
 };

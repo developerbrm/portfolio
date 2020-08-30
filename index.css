@@ -454,28 +454,32 @@ nav a {
 }
 
 #contact .email-text {
+  padding: 0.4rem 1.5rem;
   margin: 0 auto;
-  padding: 0.3rem 2rem;
   border-radius: 5px;
   background: #000000;
   width: fit-content;
   max-width: 70%;
+  transition: 0.3s ease-in-out;
+  transition-property: translate, width;
 }
 
 #contact .email-text .email {
-  margin: 0 0.3rem;
+  margin: 0 auto;
   cursor: pointer;
   background: #000000;
   border: none;
   outline: none;
   color: #fff;
   width: fit-content;
+  display: block;
 }
 
-#contact .email-text .info {
+#contact .info {
   color: var(--headingSecondaryColor);
-  display: none;
-  margin: 0 0.1rem;
+  opacity: 0;
+  display: inline-block;
+  filter: saturate(1);
 }
 
 #contact .or {
@@ -483,16 +487,17 @@ nav a {
 }
 
 #contact .submit-message {
+  width: max-content;
   margin: 0 auto;
   font-size: 1.5rem;
-  width: max-content;
   color: #b9ff99;
   padding: 1rem 3rem;
   font-weight: 500;
   border-radius: 10px;
   background-color: #05a11f;
-  display: none;
-  transition: 0.5s ease-out filter;
+  opacity: 0;
+  filter: saturate(1);
+  display: inline-block;
 }
 
 #contact form {
@@ -595,6 +600,21 @@ footer {
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  75% {
+    filter: saturate(0);
+  }
+  to {
+    opacity: 0;
+    filter: saturate(0);
+    transform: translateY(-5px);
   }
 }
 
