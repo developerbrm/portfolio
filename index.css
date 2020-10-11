@@ -361,6 +361,10 @@ nav a {
   height: 200px;
 }
 
+#projects .img-container .alignBottom {
+  object-position: bottom;
+}
+
 #projects .project .text-container {
   text-align: center;
   font-size: 0.8rem;
