@@ -229,6 +229,11 @@ nav a {
   font-size: 1.2rem;
 }
 
+header nav ul .resumeButton {
+  filter: brightness(1.5);
+  font-weight: 800;
+}
+
 /* Home */
 
 #home {
