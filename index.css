@@ -483,6 +483,7 @@ header nav ul .resumeButton {
   width: 12rem;
   display: block;
   text-align: center;
+  font-size: 1rem;
 }
 
 #contact .info {
