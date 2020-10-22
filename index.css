@@ -482,6 +482,7 @@ header nav ul .resumeButton {
   color: #fff;
   width: 12rem;
   display: block;
+  text-align: center;
 }
 
 #contact .info {
