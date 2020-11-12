@@ -486,11 +486,19 @@ header nav ul .resumeButton {
   font-size: 1rem;
 }
 
-#contact .info {
+#contact .infoContainer {
+  position: relative;
+  width: 100vw;
+  margin-top: 3.5rem;
+}
+
+#contact .infoContainer div {
+  position: absolute;
+  width: 100vw;
   color: var(--headingSecondaryColor);
   opacity: 0;
-  display: inline-block;
   filter: saturate(1);
+  bottom: 0.5rem;
 }
 
 #contact .or {
@@ -551,12 +559,14 @@ form textarea:hover {
 form textarea {
   padding: 1rem;
   max-width: 400px;
-  height: 70px;
+  min-height: 70px;
+  height: auto;
   max-height: 300px;
   width: 90%;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.116);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 form button {
@@ -625,7 +635,7 @@ footer {
   to {
     opacity: 0;
     filter: saturate(0);
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 }
 

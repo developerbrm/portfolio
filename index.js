@@ -10,7 +10,7 @@ var firebaseConfig = {
   measurementId: "G-MLD9BE3SJJ",
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 // header elements
 const header = document.querySelector("header");
@@ -183,16 +183,21 @@ const setParticleColor = (json) => {
 //Click to copy to clipboard
 
 const email = document.querySelector(".email-text .email");
+
 email.addEventListener("click", () => {
   email.select();
   email.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  document.querySelector(
-    "#contact .info"
-  ).style.animation = `fadeOut 4s cubic-bezier(0, 0.68, 0.31, 1.05) forwards`;
+  const container = document.querySelector(".infoContainer");
+  const div = document.createElement("div");
+  div.innerText = `Copied to Clipboard`;
+  div.className = `info fadeOut`;
+  container.appendChild(div);
+  div.style.animation = `fadeOut 3s cubic-bezier(0, 0.68, 0.31, 1.05) forwards`;
+
   setTimeout(() => {
-    document.querySelector("#contact .info").style.animation = "none";
-  }, 3000);
+    div.remove();
+  }, 5000);
 });
 
 //Backend integration with firebase
