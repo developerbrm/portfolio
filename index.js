@@ -10,7 +10,7 @@ var firebaseConfig = {
   measurementId: "G-MLD9BE3SJJ",
 };
 // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // header elements
 const header = document.querySelector("header");
