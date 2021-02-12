@@ -258,16 +258,16 @@ header nav ul .resumeButton {
 
 #home .img-container {
   margin: 1rem 0;
+  clip-path: circle(50% at 50% 50%);
   position: relative;
   border-radius: 50%;
-  background-color: #7363ff;
-  background: url(./assets/images/myPic.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 100%;
   width: 10rem;
   height: 10rem;
+}
+#home .img-container img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 #home .home-left-container .text-container * {
