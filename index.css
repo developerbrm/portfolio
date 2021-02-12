@@ -93,13 +93,13 @@ button {
   text-decoration: none;
   font-size: 1rem;
   color: var(--headingPrimaryColor);
-  transition: 0.3s ease-in;
+  transition: 0.2s ease;
   transition-property: filter, transform, text-decoration;
 }
 
 a:hover,
 button:hover {
-  filter: brightness(150%);
+  filter: brightness(2);
   text-decoration: underline;
 }
 
@@ -201,9 +201,11 @@ header nav {
 
 header nav .logo {
   position: relative;
+  display: inline-block;
 }
 
 header nav .logo .logo-img {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;

@@ -30,9 +30,18 @@
       <!-- navbar -->
       <nav class="navbar slideFade">
         <div class="logo slideFade" data-delay=".2">
-          <a href="#home"
-            ><img class="logo-img" src="./assets/images/myPic.jpg" alt=""
-          /></a>
+          <a href="#home">
+            <picture>
+              <source
+                srcset="./assets/images/profile-pic.webp"
+                type="image/webp"
+              />
+              <img
+              class="logo-img"
+                src="./assets/images/profile-pic.jpg"
+                alt="Profile-pic"
+              /> </picture
+          ></a>
         </div>
         <div class="themes">
           <div class="dark"></div>
@@ -67,8 +76,11 @@
         <div class="home-left-container">
           <div class="img-container slideFade">
             <picture>
-              <source srcset="./assets/images/profile-pic.webp" type="image/webp">
-              <img src="./assets/images/profile-pic.jpg" alt="Profile-pic">
+              <source
+                srcset="./assets/images/profile-pic.webp"
+                type="image/webp"
+              />
+              <img src="./assets/images/profile-pic.jpg" alt="Profile-pic" />
             </picture>
           </div>
           <div class="text-container">
@@ -504,7 +516,7 @@
           </a>
         </div>
         <div class="or">--or--</div>
-        <div class="infoContainer"> </div>
+        <div class="infoContainer"></div>
         <div data-delay=".2" class="email-text slideFade">
           <input class="email" value="developer.brm@gmail.com" readonly />
         </div>
